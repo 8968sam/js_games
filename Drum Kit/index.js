@@ -12,14 +12,14 @@ for (let i = 0; i < allButton.length; i++) {
 }
 
 // for detecting keyboard press
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown", function (event) {
 
     makeSound(event.key);
     addAnimation(event.key);
 
 });
 
-function makeSound(key){
+function makeSound(key) {
     switch (key) {
         case "w":
             let tom1 = new Audio("sounds/tom-1.mp3");
@@ -58,15 +58,15 @@ function makeSound(key){
     }
 }
 
-function addAnimation(currentKey){
+function addAnimation(currentKey) {
 
     var activeButton = document.querySelector("." + currentKey);
 
     activeButton.classList.add("pressed");
 
     setTimeout(() => {
-    
+
         activeButton.classList.remove("pressed");
-        
+
     }, 200);
 }
